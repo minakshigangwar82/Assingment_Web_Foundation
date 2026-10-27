@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Listing</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightgray;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product img {
+            width: 150px;
+            height: 120px;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Products</h1>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://placehold.co/150x120?text=Mobile"
+                 alt="Mobile">
+            <h3>Mobile Phone</h3>
+            <p>Price: ₹10,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/150x120?text=Laptop"
+                 alt="Laptop">
+            <h3>Laptop</h3>
+            <p>Price: ₹40,000</p>
+            <button>Buy Now</button>
+        </div>
+
+        <div class="product">
+            <img src="https://placehold.co/150x120?text=Headphones"
+                 alt="Headphones">
+            <h3>Headphones</h3>
+            <p>Price: ₹1,000</p>
+            <button>Buy Now</button>
+        </div>
+
+    </div>
+
+</body>
+</html>

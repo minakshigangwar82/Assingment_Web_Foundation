@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Landing Page</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #f0f4ff;
+            text-align: center;
+        }
+
+        header {
+            background-color: #172554;
+            color: white;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            padding: 60px 20px;
+        }
+
+        button {
+            background-color: #172554;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #172554;
+            color: white;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
+            .container {
+                padding: 30px 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Learning</h1>
+        <p>Learn New Skills Online</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome to Smart Learning</h2>
+
+        <p>Learn programming and improve your knowledge.</p>
+
+        <button onclick="changeText()">Get Started</button>
+
+        <p id="demo"></p>
+    </div>
+
+    <footer>
+        <p>Copyright © 2026 Smart Learning</p>
+    </footer>
+
+    <script>
+        function changeText() {
+            document.getElementById("demo").innerHTML =
+            "Thank you for joining Smart Learning!";
+        }
+    </script>
+
+</body>
+</html>

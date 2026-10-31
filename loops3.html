@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Analyzer</title>
+</head>
+<body>
+
+    <h2>Number Analyzer</h2>
+
+    <input type="number" id="number"
+           placeholder="Enter a number">
+
+    <button onclick="analyzeNumber()">Analyze</button>
+
+    <p id="result"></p>
+
+    <script>
+        function analyzeNumber() {
+            let num = Number(document.getElementById("number").value);
+            let output = "";
+
+            if (document.getElementById("number").value === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a number.";
+                return;
+            }
+
+            // Check even or odd
+            if (num % 2 === 0) {
+                output += "Number is Even<br>";
+            } else {
+                output += "Number is Odd<br>";
+            }
+
+            // Check positive, negative or zero
+            if (num > 0) {
+                output += "Number is Positive<br>";
+            } else if (num < 0) {
+                output += "Number is Negative<br>";
+            } else {
+                output += "Number is Zero<br>";
+            }
+
+            // Calculate factorial
+            if (Number.isInteger(num) && num >= 0 && num <= 170) {
+                let fact = 1;
+
+                for (let i = 1; i <= num; i++) {
+                    fact = fact * i;
+                }
+
+                output += "Factorial = " + fact;
+            } else {
+                output += "Factorial requires a whole number from 0 to 170.";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>

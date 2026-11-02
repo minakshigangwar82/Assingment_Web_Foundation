@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Summary</title>
+</head>
+<body>
+
+    <h2>Profile Summary Generator</h2>
+
+    <button onclick="generateProfile()">Generate Profile</button>
+
+    <p id="output"></p>
+
+    <script>
+        const profile = {
+            name: "Minakshi",
+            age: 20,
+            course: "BCA AI",
+
+            address: {
+                city: "Bareilly",
+                state: "Uttar Pradesh"
+            },
+
+            skills: ["HTML", "CSS", "JavaScript"]
+        };
+
+        function generateProfile() {
+
+            let summary = `
+                Name: ${profile.name}<br>
+                Age: ${profile.age}<br>
+                Course: ${profile.course}<br>
+                City: ${profile.address.city}<br>
+                State: ${profile.address.state}<br>
+                Skills: ${profile.skills.join(", ")}<br>
+                Total Properties: ${Object.keys(profile).length}
+            `;
+
+            document.getElementById("output").innerHTML = summary;
+        }
+    </script>
+
+</body>
+</html>
